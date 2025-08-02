@@ -1,0 +1,103 @@
+{
+  "address": "8mWjeFrmowFrSKTAaWrstBcbXeMJUGpLTX71pAhKGsqP",
+  "metadata": {
+    "name": "rollup_stub",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "submit_root",
+      "discriminator": [
+        15,
+        86,
+        198,
+        221,
+        22,
+        34,
+        184,
+        178
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "state_root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  111,
+                  108,
+                  108,
+                  117,
+                  112
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "signer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "root",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "StateRoot",
+      "discriminator": [
+        116,
+        222,
+        9,
+        165,
+        202,
+        186,
+        79,
+        51
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "StateRoot",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

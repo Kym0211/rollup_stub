@@ -1,0 +1,13 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anchor-client = "0.31.1"
+anchor-lang = "0.31.1"
+anyhow = "1.0.98"
+sha2 = "0.10.9"
+solana-sdk = "2.3.1"
+rollup_stub = {path = "../programs/rollup_stub"}
+shellexpand = "3.1.1"
